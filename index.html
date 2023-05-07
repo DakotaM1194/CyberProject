@@ -40,10 +40,13 @@
     </form>
   </body>
   <script>
-    var form = document.getElementById('form')
-    
+    const form = document.getElementById('form');
+    const username = document.getElementById('emailAddress');
+     
     form.addEventListener('submit', function(event){
-      var username = document.getElementById('emailAddress').value
+     event.preventDefault();
+      const usernameValue = username.value;
+      localStorage.setItem('user-name', usernameValue);
     })
     
   </script>
